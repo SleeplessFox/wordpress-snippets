@@ -1,0 +1,22 @@
+<!-- 
+  Add the following to "Header" area of the "Cookie Notice & Compliance for GDPR/CCPA" Plugin 
+
+  Get Google Analytics MESS-ID from web datastream
+  Replace below X-XXXXXXXXXX with your MESS-ID 
+-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=X-XXXXXXXXXX"></script>
+<script>
+    if (!localStorage.getItem('optout')) {
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'X-XXXXXXXXXX', {
+            'anonymize_ip': true
+        });
+    }
+</script>

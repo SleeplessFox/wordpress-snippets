@@ -1,0 +1,15 @@
+<!-- Add the following to "Body" area of the "Cookie Notice & Compliance for GDPR/CCPA" Plugin -->
+
+<!-- 
+    Go to https://maps.google.de search for your place 
+    Get url over share functionality
+    Add url to "iframeSrc" 
+-->
+<script>
+    if (!localStorage.getItem('optout')) {
+        var googlemapsIframe = document.getElementById("google-maps");
+        var iframeSrc = "https://www.google.com/maps/embed?pb=xxxxxxxxxxxxxxxxxxxxx"
+        console.log(iframeSrc);
+        googlemapsIframe.src = iframeSrc;
+    }
+</script>
